@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-     //==========20210208追加==========
      public function index()
      {
          // ダミーデータ
@@ -44,5 +43,4 @@ class ArticleController extends Controller
          ];
          return view('articles.index', ['articles' => $articles]);
      }
-     //==========20210208追加==========
 }
