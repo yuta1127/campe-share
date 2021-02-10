@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
 {
@@ -43,4 +45,15 @@ class ArticleController extends Controller
          ];
          return view('articles.index', ['articles' => $articles]);
      }
+
+     public function list()
+    {
+       
+        $articles = DB::table('articles')
+        ->select('title','content')
+        ->get();
+        
+
+        return view('articles.list',compact('articles'));
+    }
 }
