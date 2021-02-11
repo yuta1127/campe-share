@@ -3,7 +3,7 @@
 @section('title', '記事一覧')
 
 @section('content')
-  @include('nav')
+  @include('navafterlogin')
  <div class="container">
    <div class="card-body">
      @if (session('status'))
@@ -11,42 +11,27 @@
        {{ session('status') }}
      </div>
         @endif
-         <form method="GET" action="" class="form-inline my-2 my-lg-0">
-           <input class="form-control mr-sm-2" name="search" type="search" placeholder="例；git" aria-label="Search">
-           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">検索する</button>
+        <form method ="GET" action="">
+          <button type ="submit" class="btn btn-outline-success my-2 my-sm-0">新規投稿 </button>
+        </form>
+        <form method="GET" action="" class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" name="search" type="search" placeholder="例；git" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">検索する</button>
         </form>
    </div>
 
-    @foreach($articles as $article)
-      <div class="card mt-3">
+   @foreach($articles as $article)
+   <div class="card mt-3">
         <div class="card-body pt-0 pb-2">
           <h3 class="h3 card-title">
             {{ $article->title }}
           </h3>
-          <div class="card-body d-flex flex-row">
-          　<ul class="list-group list-group-horizontal">
-             <div>
-               <li class="list-group-item flex-fill">
-                <div class="card-like">
-                  <i class="fas fa-heart fa-lg fa-fw"></i>
-                    {{ $article->like }}
-                </div>
-               </li>
-               <li class="list-group-item flex-fill">
-                  <div class="font-weight-bold">
-                    {{ $article->user->name }}
-                  </div>
-               </li>
-               <li class="list-group-item flex-fill">
-                 <div class="font-weight-lighter">
-                   {{ $article->created_at->format('Y/m/d H:i') }}
-                 </div>
-               </li>
-              </div>
-            </ul>
-          </div>
         </div>
-      </div>
-    @endforeach
-  </div>
+        <div class="card-body d-flex flex-row">
+          <div class="card-like">
+            {{ $article->content }}
+           </div>
+        </div>
+   </div>
+   @endforeach
 @endsection
