@@ -32,6 +32,11 @@
             {{ $article->content }}
            </div>
         </div>
+        <div class="card-body d-flex flex-row">
+          <div class="card-like">
+            {{ $article->created_at }}
+          </div>
+        </div>
    </div>
    @endforeach
 @endsection

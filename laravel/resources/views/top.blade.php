@@ -17,36 +17,23 @@
         </form>
    </div>
 
-    @foreach($articles as $article)
-      <div class="card mt-3">
+   @foreach($articles as $article)
+   <div class="card mt-3">
         <div class="card-body pt-0 pb-2">
           <h3 class="h3 card-title">
             {{ $article->title }}
           </h3>
-          <div class="card-body d-flex flex-row">
-          　<ul class="list-group list-group-horizontal">
-             <div>
-               <li class="list-group-item flex-fill">
-                <div class="card-like">
-                  <i class="fas fa-heart fa-lg fa-fw"></i>
-                    {{ $article->like }}
-                </div>
-               </li>
-               <li class="list-group-item flex-fill">
-                  <div class="font-weight-bold">
-                    {{ $article->user->name }}
-                  </div>
-               </li>
-               <li class="list-group-item flex-fill">
-                 <div class="font-weight-lighter">
-                   {{ $article->created_at->format('Y/m/d H:i') }}
-                 </div>
-               </li>
-              </div>
-            </ul>
+        </div>
+        <div class="card-body d-flex flex-row">
+          <div class="card-like">
+            {{ $article->content }}
+           </div>
+        </div>
+        <div class="card-body d-flex flex-row">
+          <div class="card-like">
+            {{ $article->created_at }}
           </div>
         </div>
-      </div>
-    @endforeach
-  </div>
+   </div>
+   @endforeach
 @endsection
