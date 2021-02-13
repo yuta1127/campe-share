@@ -13,12 +13,6 @@
 
 
 Auth::routes();
-
-
 Route::get('/', 'TopController@top');
-Route::resource('articles', 'ArticleController')->only([
-    'index'
-]);
-
-
+Route::resource('/articles', 'ArticleController')->only(['index','show']);
 Route::get('/home', 'HomeController@index')->name('home');
