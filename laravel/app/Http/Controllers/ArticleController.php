@@ -21,8 +21,11 @@ class ArticleController extends Controller
 
         return view('articles.index',compact('articles'));
     }
-    public function show(Article $article)
+    public function show($id)
     {
+        $article = DB::table('articles')
+        ->where('id', $id)
+        ->first();
         return view('articles.show', ['article' => $article]);
     }
 }
