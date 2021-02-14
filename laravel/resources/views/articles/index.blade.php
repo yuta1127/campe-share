@@ -24,7 +24,9 @@
    <div class="card mt-3">
         <div class="card-body pt-0 pb-2">
           <h3 class="h3 card-title">
-            {{ $article->title }}
+          <a class="text-dark" href="{{ route('articles.show',[$article->id]) }}">
+          {{ $article->title }}
+          </a>
           </h3>
         </div>
         <div class="card-body d-flex flex-row">

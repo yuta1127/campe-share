@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -15,9 +16,15 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = DB::table('articles')
-        ->select('title','content','created_at')
+        ->select('id','title','content','created_at')
         ->get();
 
         return view('articles.index',compact('articles'));
+    }
+    public function show($id)
+    {
+        $article = DB::table('articles')
+        ->find($id);
+        return view('articles.show', ['article' => $article]);
     }
 }
