@@ -16,7 +16,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = DB::table('articles')
-        ->select('title','content','created_at')
+        ->select('id','title','content','created_at')
         ->get();
 
         return view('articles.index',compact('articles'));
@@ -24,8 +24,7 @@ class ArticleController extends Controller
     public function show($id)
     {
         $article = DB::table('articles')
-        ->where('id', $id)
-        ->first();
+        ->find($id);
         return view('articles.show', ['article' => $article]);
     }
 }
