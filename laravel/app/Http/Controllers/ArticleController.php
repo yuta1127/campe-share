@@ -21,10 +21,40 @@ class ArticleController extends Controller
 
         return view('articles.index',compact('articles'));
     }
+
     public function show($id)
     {
         $article = DB::table('articles')
         ->find($id);
         return view('articles.show', ['article' => $article]);
+    }
+
+    public function edit($id)
+    {
+        $article = DB::table('articles')
+        ->find($id);
+
+        return view('articles.edit',['article' => $article]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $article = DB::table('articles')
+        ->find($id);
+
+        $article->title = $request->input('title');
+        $article->content = $request->input('content');
+        $article->save();
+        return redirect()->route('articles.show');
+    }
+
+    public function destroy($id)
+    {
+        //
+        $article = DB::table('articles')
+        ->find($id);
+        $article->delete();
+
+        return redirect()->route('articles.show');
     }
 }
