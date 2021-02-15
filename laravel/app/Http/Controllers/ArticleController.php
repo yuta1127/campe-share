@@ -31,8 +31,7 @@ class ArticleController extends Controller
 
     public function edit($id)
     {
-        $article = DB::table('articles')
-        ->find($id);
+        $article = Article::find($id);
 
         return view('articles.edit',['article' => $article]);
     }
@@ -44,7 +43,7 @@ class ArticleController extends Controller
         $article->title = $request->input('title');
         $article->content = $request->input('content');
         $article->save();
-        return redirect('articles/');
+        return redirect('articles');
     }
 
     public function destroy($id)
@@ -52,6 +51,6 @@ class ArticleController extends Controller
         $article = Article::find($id);
         $article->delete();
 
-        return redirect('articles/');
+        return redirect('articles');
     }
 }
