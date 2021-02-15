@@ -16,7 +16,6 @@ class ArticleController extends Controller
     public function index(Request $request)
     {
         $search = $request->input('search');
-        //dd($search);
 
         //検索フォーム用
         $query = DB::table('articles');
