@@ -13,8 +13,29 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $search = $request->input('search');
+        //dd($request);
+
+        //検索フォーム用
+        $query = DB::table('articles');
+ 
+        if($search !== null){
+            //全角スペースを半角に
+            $search_split = mb_convert_kana($search,'s');
+ 
+            //空白で区切る
+            $search_split2 = preg_split('/[\s]+/',$search_split,-1,PREG_SPLIT_NO_EMPTY);
+ 
+            //単語をループで回す
+            foreach($search_split2 as $value)
+            {
+                $query->where('title','like','%'.$value.'%');
+            }
+ 
+        }
+
         $articles = DB::table('articles')
         ->select('id','title','content','created_at')
         ->get();
