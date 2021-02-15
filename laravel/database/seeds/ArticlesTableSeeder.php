@@ -12,18 +12,18 @@ class ArticlesTableSeeder extends Seeder
     public function run()
     {
         DB::table('articles')->insert([
-            ['user_id' => '1',
-            'title' => 'あああ',
-            'content' => 'テスト１',
+            ['user_id' => '2',
+            'title' => 'php',
+            'content' => 'テスト5',
             'created_at' => '2021-02-10 22:25:06'
             ],
-            ['user_id' => '2',
-            'title' => 'いいい',
-            'content' => 'テスト2',
+            ['user_id' => '3',
+            'title' => 'docker',
+            'content' => 'テスト6',
             'created_at' => '2021-02-10 22:32:06'
             ],
-            ['user_id' => '3',
-            'title' => 'ううう',
+            ['user_id' => '4',
+            'title' => 'HTML',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ]
