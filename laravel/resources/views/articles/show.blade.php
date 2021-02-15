@@ -11,7 +11,7 @@
         {{ $article->title }}
     </h3>
     <div class="card-text">
-      {{ $article->content }}
+        {{ $article->content }}
     </div>
   </div>
   <form method="GET" action="{{ route('articles.edit',[$article->id]) }}">
@@ -21,6 +21,7 @@
 
   <form method="POST" action="{{route('articles.destroy',[$article->id])}}" id="delete_{{$article->id}}">
      @csrf
+     @method('DELETE')
     <a href="#" class="btn btn-danger" data-id="{{$article->id}}" onclick="deletePost(this);">削除する</a>
   </form>
 </div>

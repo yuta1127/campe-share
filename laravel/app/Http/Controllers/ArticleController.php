@@ -37,24 +37,21 @@ class ArticleController extends Controller
         return view('articles.edit',['article' => $article]);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request,$id)
     {
-        $article = DB::table('articles')
-        ->find($id);
+        $article = Article::find($id);
 
         $article->title = $request->input('title');
         $article->content = $request->input('content');
         $article->save();
-        return redirect()->route('articles.show');
+        return redirect('articles/');
     }
 
     public function destroy($id)
     {
-        //
-        $article = DB::table('articles')
-        ->find($id);
+        $article = Article::find($id);
         $article->delete();
 
-        return redirect()->route('articles.show');
+        return redirect('articles/');
     }
 }

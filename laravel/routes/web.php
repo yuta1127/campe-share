@@ -14,5 +14,5 @@
 
 Auth::routes();
 Route::get('/', 'TopController@top');
-Route::resource('/articles', 'ArticleController')->only(['index','store','show','edit','update','destroy']);
+Route::resource('/articles', 'ArticleController')->only(['index','show','edit','update','destroy']);
 Route::get('/home', 'HomeController@index')->name('home');
