@@ -13,12 +13,16 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+        if (Schema::hasTable('users')) {
+            // テーブルが存在していればリターン
+            return;
+        }
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password')->nullable;
+            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });
