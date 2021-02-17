@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth; 
 
 class ArticleController extends Controller
 {
@@ -72,10 +73,10 @@ class ArticleController extends Controller
         return redirect('articles');
     }
 
-    public function like(Request $request, Article $article)
+    public function like(Article $article)
     {
-        $article->likes()->detach($request->user()->id);
-        $article->likes()->attach($request->user()->id);
+        $id = Auth::id();
+        $article->likes()->attach($id);
 
         return [
             'id' => $article->id,
@@ -83,9 +84,10 @@ class ArticleController extends Controller
         ];
     }
 
-    public function unlike(Request $request, Article $article)
+    public function unlike(Article $article)
     {
-        $article->likes()->detach($request->user()->id);
+        $id = Auth::id();
+        $article->likes()->detach($id);
 
         return [
             'id' => $article->id,
