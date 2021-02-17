@@ -35,8 +35,7 @@ class ArticleController extends Controller
  
         }
 
-        $articles = $query->select('id','title','content','created_at')
-        ->get();
+        $articles = Article::all();
 
         return view('articles.index',compact('articles'));
     }
@@ -71,5 +70,26 @@ class ArticleController extends Controller
         $article->delete();
 
         return redirect('articles');
+    }
+
+    public function like(Request $request, Article $article)
+    {
+        $article->likes()->detach($request->user()->id);
+        $article->likes()->attach($request->user()->id);
+
+        return [
+            'id' => $article->id,
+            'countLikes' => $article->count_likes,
+        ];
+    }
+
+    public function unlike(Request $request, Article $article)
+    {
+        $article->likes()->detach($request->user()->id);
+
+        return [
+            'id' => $article->id,
+            'countLikes' => $article->count_likes,
+        ];
     }
 }
