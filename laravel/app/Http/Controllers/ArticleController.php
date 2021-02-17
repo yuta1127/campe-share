@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth; 
 
 class ArticleController extends Controller
 {
@@ -35,8 +36,7 @@ class ArticleController extends Controller
  
         }
 
-        $articles = $query->select('id','title','content','created_at')
-        ->get();
+        $articles = Article::all();
 
         return view('articles.index',compact('articles'));
     }
@@ -71,5 +71,27 @@ class ArticleController extends Controller
         $article->delete();
 
         return redirect('articles');
+    }
+
+    public function like(Article $article)
+    {
+        $id = Auth::id();
+        $article->likes()->attach($id);
+
+        return [
+            'id' => $article->id,
+            'countLikes' => $article->count_likes,
+        ];
+    }
+
+    public function unlike(Article $article)
+    {
+        $id = Auth::id();
+        $article->likes()->detach($id);
+
+        return [
+            'id' => $article->id,
+            'countLikes' => $article->count_likes,
+        ];
     }
 }
