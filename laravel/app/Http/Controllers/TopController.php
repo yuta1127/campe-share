@@ -29,8 +29,8 @@ class TopController extends Controller
             }
  
         }
+            $articles = Article::paginate(10);;
 
-             $articles = Article::paginate(10);;
             return view('top',compact('articles'));
     }
 }

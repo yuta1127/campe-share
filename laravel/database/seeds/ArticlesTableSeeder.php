@@ -71,7 +71,52 @@ class ArticlesTableSeeder extends Seeder
             'title' => 'kotlin',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
-            ]
+            ],
+            ['user_id' => '13',
+            'title' => 'AWS',
+            'content' => 'テスト3',
+            'created_at' => '2021-02-10 23:32:06'
+            ],
+            ['user_id' => '14',
+            'title' => 'GCP',
+            'content' => 'テスト3',
+            'created_at' => '2021-02-10 23:32:06'
+            ],
+            ['user_id' => '15',
+            'title' => 'Azure',
+            'content' => 'テスト3',
+            'created_at' => '2021-02-10 23:32:06'
+            ],
+            ['user_id' => '16',
+            'title' => 'Redmine',
+            'content' => 'テスト3',
+            'created_at' => '2021-02-10 23:32:06'
+            ],
+            ['user_id' => '17',
+            'title' => 'Backlog',
+            'content' => 'テスト3',
+            'created_at' => '2021-02-10 23:32:06'
+            ],
+            ['user_id' => '18',
+            'title' => 'Gitlab',
+            'content' => 'テスト3',
+            'created_at' => '2021-02-10 23:32:06'
+            ],
+            ['user_id' => '19',
+            'title' => 'Source Tree',
+            'content' => 'テスト3',
+            'created_at' => '2021-02-10 23:32:06'
+            ],
+            ['user_id' => '20',
+            'title' => 'PostgreSQL',
+            'content' => 'テスト3',
+            'created_at' => '2021-02-10 23:32:06'
+            ],
+            ['user_id' => '21',
+            'title' => 'Ruby on Rails',
+            'content' => 'テスト3',
+            'created_at' => '2021-02-10 23:32:06'
+            ],
         ]);
     }
 }
