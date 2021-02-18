@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -28,9 +29,8 @@ class TopController extends Controller
             }
  
         }
+            $articles = Article::paginate(10);;
 
-        $articles = $query->select('id','title','content','created_at')
-        ->get();
             return view('top',compact('articles'));
     }
 }
