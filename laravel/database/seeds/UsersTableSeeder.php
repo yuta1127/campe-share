@@ -96,6 +96,10 @@ class UsersTableSeeder extends Seeder
             'email' => 'nemoto444@test.com',
             'password' => Hash::make('password123'),
             ],
+            ['name' => 'ゲストユーザー',
+            'email' => 'guest@guest.com',
+            'password' => Hash::make('password123'),
+            ],
         ]);
     }
 }
