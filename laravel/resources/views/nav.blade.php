@@ -13,7 +13,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="">ゲストログイン</a>
+      <a class="nav-link" href="{{ route('articles.index') }}">ゲストログイン</a>
     </li>
 
     <!-- Dropdown -->
