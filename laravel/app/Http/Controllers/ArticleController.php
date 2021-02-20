@@ -43,8 +43,8 @@ class ArticleController extends Controller
 
     public function show($id)
     {
-        $article = DB::table('articles')
-        ->find($id);
+        $article = Article::find($id);
+
         return view('articles.show', ['article' => $article]);
     }
 
