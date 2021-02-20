@@ -15,7 +15,7 @@
 Auth::routes();
 
 # TOPページ
-Route::get('/', 'TopController@top');
+Route::get('/', 'TopController@index');
 
 # index,show
 Route::resource('/articles', 'ArticleController')->only(['index','show']);
