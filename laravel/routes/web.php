@@ -36,6 +36,3 @@ Route::group(['middleware' => 'auth'], function() {
 
 # ゲストユーザーログイン
 Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
-
-# home
-Route::get('/home', 'HomeController@index')->name('home');
