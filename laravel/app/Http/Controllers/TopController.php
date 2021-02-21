@@ -8,11 +8,11 @@ use Illuminate\Support\Facades\DB;
 
 class TopController extends Controller
 {
-    public function index()
+    public function search(Request $request)
     {
+        
         $articles = Article::paginate(10);;
 
-        return view('articles.index',compact('articles'));
-
+        return view('top',compact('articles'));
     }
 }

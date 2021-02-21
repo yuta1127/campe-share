@@ -30,7 +30,7 @@ class Article extends Model
         return $this->likes->count();
     }
 
-    public function index(Request $request)
+    public function search(Request $request)
     {
         $search = $request->input('search');
 
@@ -49,7 +49,7 @@ class Article extends Model
             {
                 $query->where('title','like','%'.$value.'%');
             }
- 
+
         }
     }
 }
