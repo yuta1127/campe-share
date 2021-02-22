@@ -10,9 +10,9 @@ class TopController extends Controller
 {
     public function search(Request $request)
     {
-        
+        $article = new Article(); //モデル名でインスタンスを作成
+        $search = $article->search;
         $articles = Article::paginate(10);;
-
-        return view('top',compact('articles'));
+        return view('top',compact('articles','search'));
     }
 }
