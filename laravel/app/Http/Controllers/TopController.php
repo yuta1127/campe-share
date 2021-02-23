@@ -12,8 +12,8 @@ class TopController extends Controller
     {
         $article = new Article(); //モデル名でインスタンスを作成
         $search = $article->search;
-        $articles = Article::paginate(10)
-        ->search;
+        $articles = $search->select('title','content','created_at')
+        ->paginate(10);
 
         return view('top',compact('articles'));
     }
