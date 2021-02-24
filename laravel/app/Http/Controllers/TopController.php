@@ -10,10 +10,10 @@ class TopController extends Controller
 {
     public function search(Request $request)
     {
+
         $article = new Article(); //モデル名でインスタンスを作成
-        $search = $article->search;
-        $articles = $search->select('title','content','created_at')
-        ->paginate(10);
+        $article->articles = $request->articles;
+        dd($article);
 
         return view('top',compact('articles'));
     }

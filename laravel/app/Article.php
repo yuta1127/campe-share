@@ -30,8 +30,9 @@ class Article extends Model
         return $this->likes->count();
     }
 
-    public function search(Request $request)
+    public function scopesearch(Request $request)
     {
+        
         $search = $request->input('search');
 
         //検索フォーム用
@@ -50,6 +51,9 @@ class Article extends Model
                 $query->where('title','like','%'.$value.'%');
             }
         }
-        return $query;
+
+        $articles = $query->select('id','title','content','created_at')
+        ->paginate(10);
+        return $this->articles;
     }
 }
