@@ -15,9 +15,8 @@ class ArticleController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function index(Request $request)
+    public function index(Request $request,Article $article)
     {
-        $article = new Article(); //モデル名でインスタンスを作成
         $articles = $article->search($request);
 
 

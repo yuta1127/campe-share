@@ -8,9 +8,8 @@ use Illuminate\Support\Facades\DB;
 
 class TopController extends Controller
 {
-    public function search(Request $request)
+    public function search(Request $request,Article $article)
     {
-        $article = new Article(); //モデル名でインスタンスを作成
         $articles = $article->search($request);
 
         //viewに渡す
