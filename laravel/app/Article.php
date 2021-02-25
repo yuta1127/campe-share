@@ -30,7 +30,7 @@ class Article extends Model
         return $this->likes->count();
     }
 
-    public function scopesearch(Request $request)
+    public function search(Request $request)
     {
         
         $search = $request->input('search');
@@ -54,6 +54,6 @@ class Article extends Model
 
         $articles = $query->select('id','title','content','created_at')
         ->paginate(10);
-        return $this->articles;
+        return $articles;
     }
 }
