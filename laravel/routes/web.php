@@ -15,7 +15,7 @@
 Auth::routes();
 
 # TOPページ
-Route::get('/', 'TopController@top');
+Route::get('/', 'TopController@search');
 
 # index,show
 Route::resource('/articles', 'ArticleController')->only(['index','show']);
@@ -36,6 +36,3 @@ Route::group(['middleware' => 'auth'], function() {
 
 # ゲストユーザーログイン
 Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
-
-# home
-Route::get('/home', 'HomeController@index')->name('home');
