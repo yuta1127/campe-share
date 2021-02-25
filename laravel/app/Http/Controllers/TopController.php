@@ -8,18 +8,14 @@ use Illuminate\Support\Facades\DB;
 
 class TopController extends Controller
 {
-    protected $article;
 
-    //コンストラクタ
-    public function __construct(Article $article)
-    {
-        $this->article = $article;
-    }
+    public $article;
+
 
     public function search(Request $request)
     {
         $article = new Article(); //モデル名でインスタンスを作成
-        $search = $this->$article->search($request);
+        $articles = $article->search($request);
 
         //viewに渡す
         return view('top',compact('articles'));

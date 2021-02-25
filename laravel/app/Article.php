@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -32,11 +33,11 @@ class Article extends Model
 
     public function search(Request $request)
     {
-        
+
         $search = $request->input('search');
 
         //検索フォーム用
-        $query = DB::table('articles');
+        $query = Article::query();
 
         if($search !== null){
             //全角スペースを半角に
