@@ -8,10 +8,6 @@ use Illuminate\Support\Facades\DB;
 
 class TopController extends Controller
 {
-
-    public $article;
-
-
     public function search(Request $request)
     {
         $article = new Article(); //モデル名でインスタンスを作成
