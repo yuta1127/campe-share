@@ -1,6 +1,9 @@
 @extends('app')
 
+@section('title', 'ログイン')
+
 @section('content')
+
 @include('nav')
 <div class="container">
     <div class="row justify-content-center">
