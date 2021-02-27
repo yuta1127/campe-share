@@ -12,72 +12,72 @@ class ArticlesTableSeeder extends Seeder
     public function run()
     {
         DB::table('articles')->insert([
-            ['user_id' => '1',
+            ['user_id' => '22',
             'title' => 'php',
             'content' => 'テスト5',
             'created_at' => '2021-02-10 22:25:06'
             ],
-            ['user_id' => '2',
+            ['user_id' => '22',
             'title' => 'docker',
             'content' => 'テスト6',
             'created_at' => '2021-02-10 22:32:06'
             ],
-            ['user_id' => '3',
+            ['user_id' => '22',
             'title' => 'HTML',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '4',
+            ['user_id' => '22',
             'title' => 'CSS',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '5',
+            ['user_id' => '22',
             'title' => 'javascript',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '6',
+            ['user_id' => '22',
             'title' => 'Ruby',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '7',
+            ['user_id' => '22',
             'title' => 'Java',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '8',
+            ['user_id' => '22',
             'title' => 'Python',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '9',
+            ['user_id' => '22',
             'title' => 'Go',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '10',
+            ['user_id' => '22',
             'title' => 'C',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '11',
+            ['user_id' => '22',
             'title' => 'swift',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '12',
+            ['user_id' => '22',
             'title' => 'kotlin',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '13',
+            ['user_id' => '22',
             'title' => 'AWS',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '14',
+            ['user_id' => '22',
             'title' => 'GCP',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
