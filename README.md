@@ -23,6 +23,10 @@
   * PHP 7.3.11
   * Laravel 6.20.16
 
+
+* __データベース__
+MySQL 5.5.60
+
   
 * 使用エディタ
   * Visual Studio Code
