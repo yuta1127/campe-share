@@ -62,7 +62,7 @@ class ArticlesTableSeeder extends Seeder
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '11',
+            ['user_id' => '1',
             'title' => 'swift',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
@@ -107,12 +107,12 @@ class ArticlesTableSeeder extends Seeder
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '20',
+            ['user_id' => '1',
             'title' => 'PostgreSQL',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '21',
+            ['user_id' => '1',
             'title' => 'Ruby on Rails',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
