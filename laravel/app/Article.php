@@ -55,6 +55,7 @@ class Article extends Model
 
         $articles = $query->select('id','title','content','created_at')
         ->orderBy('created_at', 'desc')
+        ->inRandomOrder()
         ->paginate(10);
         return $articles;
     }
