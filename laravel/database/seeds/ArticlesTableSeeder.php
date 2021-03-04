@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\User;
 
 class ArticlesTableSeeder extends Seeder
 {
@@ -12,107 +13,107 @@ class ArticlesTableSeeder extends Seeder
     public function run()
     {
         DB::table('articles')->insert([
-            ['user_id' => '1',
+            ['user_id' => User::all()->random()->id,
             'title' => 'php',
             'content' => 'テスト5',
             'created_at' => '2021-02-10 22:25:06'
             ],
-            ['user_id' => '2',
+            ['user_id' => User::all()->random()->id,
             'title' => 'docker',
             'content' => 'テスト6',
             'created_at' => '2021-02-10 22:32:06'
             ],
-            ['user_id' => '3',
+            ['user_id' => User::all()->random()->id,
             'title' => 'HTML',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '4',
+            ['user_id' => User::all()->random()->id,
             'title' => 'CSS',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '5',
+            ['user_id' => User::all()->random()->id,
             'title' => 'javascript',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '6',
+            ['user_id' => User::all()->random()->id,
             'title' => 'Ruby',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '7',
+            ['user_id' => User::all()->random()->id,
             'title' => 'Java',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '8',
+            ['user_id' => User::all()->random()->id,
             'title' => 'Python',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '9',
+            ['user_id' => User::all()->random()->id,
             'title' => 'Go',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '10',
+            ['user_id' => User::all()->random()->id,
             'title' => 'C',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '1',
+            ['user_id' => User::all()->random()->id,
             'title' => 'swift',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '12',
+            ['user_id' => User::all()->random()->id,
             'title' => 'kotlin',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '13',
+            ['user_id' => User::all()->random()->id,
             'title' => 'AWS',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '14',
+            ['user_id' => User::all()->random()->id,
             'title' => 'GCP',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '15',
+            ['user_id' => User::all()->random()->id,
             'title' => 'Azure',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '16',
+            ['user_id' => User::all()->random()->id,
             'title' => 'Redmine',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '17',
+            ['user_id' => User::all()->random()->id,
             'title' => 'Backlog',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '18',
+            ['user_id' => User::all()->random()->id,
             'title' => 'Gitlab',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '19',
+            ['user_id' => User::all()->random()->id,
             'title' => 'Source Tree',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '1',
+            ['user_id' => User::all()->random()->id,
             'title' => 'PostgreSQL',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
             ],
-            ['user_id' => '1',
+            ['user_id' => User::all()->random()->id,
             'title' => 'Ruby on Rails',
             'content' => 'テスト3',
             'created_at' => '2021-02-10 23:32:06'
