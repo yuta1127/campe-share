@@ -5,6 +5,15 @@
 **URL：** http://campe-share.herokuapp.com/<br>
 **URL：** http://35.72.122.134/
 
+
+# デモアカウント
+
+
+```bash
+ログインID:guest@guest.com
+パスワード:password123
+```
+
 ## アプリ概要
 アプリのコンセプトは、以下の２点です。
 
