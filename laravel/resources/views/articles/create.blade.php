@@ -21,7 +21,7 @@
                 <label></label>
                 <textarea name="content" required class="form-control" rows="16" placeholder="本文">{{ old('content') }}</textarea>
                 </div>
-                <input class="btn btn-info" type="submit" value="更新する"></input>
+                <input class="btn btn-info" type="submit" value="投稿する"></input>
               </form>
             </div>
           </div>

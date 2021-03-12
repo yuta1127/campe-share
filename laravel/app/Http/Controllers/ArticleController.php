@@ -30,11 +30,10 @@ class ArticleController extends Controller
 
     public function store(Request $request,Article $article)
     {
+        $article->user_id = Auth::id();
         $article->title = $request->input('title');
         $article->content = $request->input('content');
-        $article->user_id = $request->user()->id;
 
-        //dd($article);
         $article->save();
         return redirect('articles');
     }
