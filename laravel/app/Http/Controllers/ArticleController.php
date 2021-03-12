@@ -28,6 +28,17 @@ class ArticleController extends Controller
         return view('articles.create');
     }
 
+    public function store(Request $request,Article $article)
+    {
+        $article->title = $request->input('title');
+        $article->content = $request->input('content');
+        $article->user_id = $request->user()->id;
+
+        //dd($article);
+        $article->save();
+        return redirect('articles');
+    }
+
     public function show($id)
     {
         $article = Article::find($id);
