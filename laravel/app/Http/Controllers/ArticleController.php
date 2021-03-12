@@ -23,6 +23,21 @@ class ArticleController extends Controller
         return view('articles.index',compact('articles'));
     }
 
+    public function create()
+    {
+        return view('articles.create');
+    }
+
+    public function store(Request $request,Article $article)
+    {
+        $article->user_id = Auth::id();
+        $article->title = $request->input('title');
+        $article->content = $request->input('content');
+
+        $article->save();
+        return redirect('articles');
+    }
+
     public function show($id)
     {
         $article = Article::find($id);

@@ -20,7 +20,13 @@ Route::get('/', 'TopController@search');
 # index,show
 Route::resource('/articles', 'ArticleController')->only(['index','show']);
 
-# ログインしている時のみ、で使用可能なメソッド
+# create,store
+Route::get('create','ArticleController@create')->name('articles.create')->middleware('auth');
+Route::post('store','ArticleController@store')->name('articles.store')->middleware('auth');
+
+
+
+# ログインしている時のみ使用可能なメソッド
 Route::group(['middleware' => 'auth'], function() {
 
 
